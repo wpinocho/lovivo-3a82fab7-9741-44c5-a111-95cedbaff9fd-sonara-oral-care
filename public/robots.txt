@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Rutas internas de checkout y cuenta — no indexar
+Disallow: /carrito
+Disallow: /pagar
+Disallow: /gracias
+Disallow: /mis-pedidos
+Disallow: /mis-suscripciones
+Disallow: /pago-pendiente
+
+Sitemap: /sitemap.xml

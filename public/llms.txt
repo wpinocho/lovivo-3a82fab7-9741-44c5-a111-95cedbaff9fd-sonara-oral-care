@@ -1,0 +1,22 @@
+# https://template-lovivo-template-pruebas.lovable.app
+
+Tienda online. Este archivo ayuda a modelos de lenguaje (LLMs) a indexar y entender el contenido del sitio.
+
+## Páginas principales
+- [Inicio](https://template-lovivo-template-pruebas.lovable.app/)
+- [Blog](https://template-lovivo-template-pruebas.lovable.app/blog)
+- [Términos y Condiciones](https://template-lovivo-template-pruebas.lovable.app/terminos-y-condiciones)
+- [Aviso de Privacidad](https://template-lovivo-template-pruebas.lovable.app/aviso-de-privacidad)
+
+## Productos (5)
+- [bao de t jengibre limn detox](https://template-lovivo-template-pruebas.lovable.app/productos/bao-de-t-jengibre-limn-detox)
+- [bao de t lavanda manzanilla](https://template-lovivo-template-pruebas.lovable.app/productos/bao-de-t-lavanda-manzanilla)
+- [bao de t menta eucalipto](https://template-lovivo-template-pruebas.lovable.app/productos/bao-de-t-menta-eucalipto)
+- [bao de t rosa jazmn](https://template-lovivo-template-pruebas.lovable.app/productos/bao-de-t-rosa-jazmn)
+- [set descubrimiento baos de t](https://template-lovivo-template-pruebas.lovable.app/productos/set-descubrimiento-baos-de-t)
+
+## Blog (1)
+- [bienvenido a nuestro blog](https://template-lovivo-template-pruebas.lovable.app/blog/bienvenido-a-nuestro-blog)
+
+## Sitemap
+- [sitemap.xml](https://template-lovivo-template-pruebas.lovable.app/sitemap.xml)

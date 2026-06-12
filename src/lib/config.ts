@@ -1,0 +1,3 @@
+export const STORE_ID = "3dc97d65-fb22-4d07-9137-0a65426d84df";
+export const STRIPE_PUBLISHABLE_KEY =
+  "pk_live_51Rk9SNP66p9BDoW4lgxDnuqvNZYEaL400FCX0GStvuaslkEMBZNRqln5M5bDcBSBmFmR7hlY0pDcA4u4VIi8CRIg00KkqRzlVs";
