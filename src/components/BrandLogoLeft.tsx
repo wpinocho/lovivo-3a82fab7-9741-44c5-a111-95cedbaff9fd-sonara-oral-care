@@ -1,16 +1,21 @@
+import { Link } from 'react-router-dom'
+
 export const BrandLogoLeft = () => {
   return (
-    <a href="/" aria-label="Home" className="ml-2 flex items-center">
-      {/* TEMPLATE: Replace /logo.png with your brand logo */}
-      <img 
+    <Link to="/" aria-label="Sonara — Inicio" className="flex items-center flex-shrink-0">
+      <img
         src="/logo.png"
-        alt="Logo"
-        className="h-8 w-auto object-contain" 
+        alt="Sonara Oral Care"
+        className="h-10 w-auto object-contain"
         onError={(e) => {
-          e.currentTarget.style.display = 'none';
-          e.currentTarget.parentElement!.innerHTML = '<span class="text-xl font-bold text-black">YourBrand</span>';
+          const el = e.currentTarget
+          el.style.display = 'none'
+          const span = document.createElement('span')
+          span.textContent = 'SONARA'
+          span.style.cssText = 'font-family: Sora, sans-serif; font-size: 20px; font-weight: 700; letter-spacing: -0.03em; color: hsl(213 52% 12%)'
+          el.parentElement?.appendChild(span)
         }}
       />
-    </a>
+    </Link>
   )
 }

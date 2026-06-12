@@ -6,87 +6,78 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* ============================================================
+   SONARA ORAL CARE — Design System
+   All colors in HSL. All tokens defined here, never inline.
+   ============================================================ */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Brand Palette */
+    --ink: 213 52% 12%;           /* #0F1C2E — deep navy, primary text */
+    --ink-mid: 210 17% 44%;       /* #5A6B7E — secondary text */
+    --blue-primary: 217 91% 51%; /* #0E63F4 — links, active states */
+    --aqua: 175 62% 61%;          /* #5FD4C4 — fresh/clean accent */
+    --gold-star: 42 100% 50%;     /* #FFB800 — review stars */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Surfaces */
+    --background: 60 20% 98%;     /* #FAFAF8 — bone white base */
+    --surface: 0 0% 100%;         /* #FFFFFF — cards */
+    --ice-blue: 212 100% 95%;     /* #EAF3FF — alternating section bg */
+    --mint-pale: 162 67% 96%;     /* #F2FBF9 — mint section bg */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Semantic tokens (shadcn compatibility) */
+    --foreground: var(--ink);
+    --card: var(--surface);
+    --card-foreground: var(--ink);
+    --popover: var(--surface);
+    --popover-foreground: var(--ink);
+    --primary: var(--ink);
+    --primary-foreground: 0 0% 100%;
+    --secondary: var(--ice-blue);
+    --secondary-foreground: var(--ink);
+    --muted: 210 20% 96%;
+    --muted-foreground: 210 17% 44%;
+    --accent: var(--aqua);
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 213 20% 90%;
+    --input: 213 20% 90%;
+    --ring: var(--blue-primary);
+    --radius: 0.75rem;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
+    /* Sidebar */
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --background: 213 52% 8%;
+    --foreground: 60 20% 98%;
+    --card: 213 52% 10%;
+    --card-foreground: 60 20% 98%;
+    --popover: 213 52% 10%;
+    --popover-foreground: 60 20% 98%;
+    --primary: 60 20% 98%;
+    --primary-foreground: 213 52% 12%;
+    --secondary: 213 30% 18%;
+    --secondary-foreground: 60 20% 98%;
+    --muted: 213 30% 18%;
+    --muted-foreground: 213 20% 60%;
+    --accent: var(--aqua);
+    --accent-foreground: 213 52% 12%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 60 20% 98%;
+    --border: 213 30% 18%;
+    --input: 213 30% 18%;
+    --ring: var(--aqua);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -105,5 +96,236 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Sora', sans-serif;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+}
+
+/* ============================================================
+   SONARA UTILITY CLASSES
+   ============================================================ */
+
+@layer utilities {
+  /* Section backgrounds */
+  .bg-bone     { background-color: hsl(60 20% 98%); }
+  .bg-ice-blue { background-color: hsl(212 100% 95%); }
+  .bg-mint-pale { background-color: hsl(162 67% 96%); }
+  .bg-ink      { background-color: hsl(213 52% 12%); }
+
+  /* Text colors */
+  .text-ink     { color: hsl(213 52% 12%); }
+  .text-ink-mid { color: hsl(210 17% 44%); }
+  .text-aqua    { color: hsl(175 62% 61%); }
+  .text-blue-primary { color: hsl(217 91% 51%); }
+  .text-star    { color: hsl(42 100% 50%); }
+
+  /* Border colors */
+  .border-aqua  { border-color: hsl(175 62% 61%); }
+  .border-ink   { border-color: hsl(213 52% 12%); }
+
+  /* Background colors */
+  .bg-aqua { background-color: hsl(175 62% 61%); }
+  .bg-blue-primary { background-color: hsl(217 91% 51%); }
+  .bg-aqua-light { background-color: hsl(175 62% 92%); }
+
+  /* Shadows — soft, diffuse */
+  .shadow-sonara { box-shadow: 0 4px 24px hsl(213 52% 12% / 0.07), 0 1px 4px hsl(213 52% 12% / 0.04); }
+  .shadow-sonara-md { box-shadow: 0 8px 40px hsl(213 52% 12% / 0.10), 0 2px 8px hsl(213 52% 12% / 0.05); }
+  .shadow-sonara-lg { box-shadow: 0 16px 64px hsl(213 52% 12% / 0.12), 0 4px 16px hsl(213 52% 12% / 0.06); }
+
+  /* Animations */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Hover scale for cards */
+  .hover-lift {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .hover-lift:hover {
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 0 16px 48px hsl(213 52% 12% / 0.12);
+  }
+}
+
+/* ============================================================
+   SONARA BUTTON VARIANTS
+   ============================================================ */
+
+@layer components {
+  /* Primary pill button — ink bg, white text */
+  .btn-sonara-primary {
+    @apply inline-flex items-center justify-center gap-2 font-semibold transition-all duration-200 cursor-pointer select-none;
+    font-family: 'Sora', sans-serif;
+    background-color: hsl(213 52% 12%);
+    color: hsl(0 0% 100%);
+    border-radius: 100px;
+    padding: 14px 28px;
+    font-size: 15px;
+    letter-spacing: -0.01em;
+  }
+  .btn-sonara-primary:hover {
+    background-color: hsl(217 91% 51%);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px hsl(217 91% 51% / 0.35);
+  }
+  .btn-sonara-primary:active {
+    transform: translateY(0);
+  }
+
+  /* Secondary pill button — outline ink */
+  .btn-sonara-secondary {
+    @apply inline-flex items-center justify-center gap-2 font-semibold transition-all duration-200 cursor-pointer select-none;
+    font-family: 'Sora', sans-serif;
+    background-color: transparent;
+    color: hsl(213 52% 12%);
+    border: 1.5px solid hsl(213 52% 12%);
+    border-radius: 100px;
+    padding: 13px 28px;
+    font-size: 15px;
+    letter-spacing: -0.01em;
+  }
+  .btn-sonara-secondary:hover {
+    background-color: hsl(213 52% 12%);
+    color: hsl(0 0% 100%);
+  }
+
+  /* Ghost text link with arrow */
+  .btn-sonara-ghost {
+    @apply inline-flex items-center gap-1.5 font-medium transition-all duration-200 cursor-pointer;
+    font-family: 'Sora', sans-serif;
+    color: hsl(213 52% 12%);
+    font-size: 15px;
+    text-decoration: none;
+  }
+  .btn-sonara-ghost:hover {
+    color: hsl(217 91% 51%);
+    gap: 8px;
+  }
+
+  /* White pill — for dark bg sections */
+  .btn-sonara-white {
+    @apply inline-flex items-center justify-center gap-2 font-semibold transition-all duration-200 cursor-pointer select-none;
+    font-family: 'Sora', sans-serif;
+    background-color: hsl(0 0% 100%);
+    color: hsl(213 52% 12%);
+    border-radius: 100px;
+    padding: 14px 28px;
+    font-size: 15px;
+    letter-spacing: -0.01em;
+  }
+  .btn-sonara-white:hover {
+    background-color: hsl(175 62% 61%);
+    color: hsl(0 0% 100%);
+    transform: translateY(-1px);
+  }
+
+  /* Aqua pill */
+  .btn-sonara-aqua {
+    @apply inline-flex items-center justify-center gap-2 font-semibold transition-all duration-200 cursor-pointer select-none;
+    font-family: 'Sora', sans-serif;
+    background-color: hsl(175 62% 61%);
+    color: hsl(0 0% 100%);
+    border-radius: 100px;
+    padding: 14px 28px;
+    font-size: 15px;
+    letter-spacing: -0.01em;
+  }
+  .btn-sonara-aqua:hover {
+    background-color: hsl(175 62% 50%);
+    transform: translateY(-1px);
+  }
+
+  /* Card base */
+  .card-sonara {
+    background-color: hsl(0 0% 100%);
+    border-radius: 22px;
+    @apply shadow-sonara;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .card-sonara:hover {
+    transform: translateY(-2px);
+    @apply shadow-sonara-md;
+  }
+
+  /* Card elevated — for bundle highlight */
+  .card-sonara-elevated {
+    background-color: hsl(0 0% 100%);
+    border-radius: 22px;
+    border: 2px solid hsl(175 62% 61%);
+    @apply shadow-sonara-lg;
+    transform: translateY(-4px);
+  }
+
+  /* Badge pill */
+  .badge-sonara {
+    display: inline-flex;
+    align-items: center;
+    font-family: 'Sora', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 100px;
+    background-color: hsl(175 62% 92%);
+    color: hsl(175 45% 30%);
+  }
+  .badge-sonara-ink {
+    background-color: hsl(213 52% 12%);
+    color: hsl(0 0% 100%);
+  }
+  .badge-sonara-blue {
+    background-color: hsl(217 91% 95%);
+    color: hsl(217 91% 40%);
+  }
+
+  /* Announcement bar */
+  .announcement-bar {
+    background-color: hsl(213 52% 12%);
+    color: hsl(0 0% 100%);
+    font-size: 13px;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    padding: 10px 16px;
+    letter-spacing: 0.01em;
+  }
+}
+
+/* Scroll animations */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays for children */
+.stagger-1 { transition-delay: 0.05s; }
+.stagger-2 { transition-delay: 0.1s; }
+.stagger-3 { transition-delay: 0.15s; }
+.stagger-4 { transition-delay: 0.2s; }
+
+/* Accordion custom */
+.accordion-sonara [data-state="open"] .accordion-icon {
+  transform: rotate(45deg);
+}
+.accordion-icon {
+  transition: transform 0.2s ease;
 }

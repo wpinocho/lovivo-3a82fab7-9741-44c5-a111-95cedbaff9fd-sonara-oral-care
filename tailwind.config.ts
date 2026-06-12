@@ -19,6 +19,7 @@ export default {
 		},
 		extend: {
 			fontFamily: {
+				'sora': ['Sora', 'sans-serif'],
 				'dm-sans': ['"DM Sans"', 'sans-serif'],
 				'inter': ['Inter', 'sans-serif'],
 				'lato': ['Lato', 'sans-serif'],
@@ -85,7 +86,17 @@ export default {
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
-			keyframes: {
+				spacing: {
+					'section-sm': '64px',
+					'section': '96px',
+					'section-lg': '128px',
+				},
+				borderRadius: {
+					'card': '22px',
+					'card-lg': '28px',
+					'pill': '100px',
+				},
+				keyframes: {
 				'accordion-down': {
 					from: {
 						height: '0'
@@ -105,7 +116,15 @@ export default {
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease forwards',
+				'slide-up': 'slide-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+				'float': 'float 3s ease-in-out infinite',
+			},
+			backgroundImage: {
+				'gradient-hero': 'linear-gradient(135deg, hsl(212 100% 95%) 0%, hsl(162 67% 96%) 100%)',
+				'gradient-ink': 'linear-gradient(135deg, hsl(213 52% 12%) 0%, hsl(213 52% 20%) 100%)',
+				'gradient-aqua': 'linear-gradient(135deg, hsl(175 62% 61%) 0%, hsl(195 72% 55%) 100%)',
 			}
 		}
 	},

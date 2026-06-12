@@ -83,12 +83,12 @@ export const PageTemplate = ({
         </header>
       )}
       
-      <div className="flex-1 py-6">
+      <div className="flex-1">
         {renderContent()}
       </div>
 
       {footer && (
-        <footer className="border-t bg-muted/30">
+        <footer>
           {footer}
         </footer>
       )}
